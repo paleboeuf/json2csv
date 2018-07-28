@@ -235,3 +235,8 @@ id,email,tags,profiles.facebook.id,profiles.facebook.picture,profiles.twitter.id
 8,wademcleod@updat.com,"fugiat,duis,exercitation",8,//fbcdn.com/b05115ad-fec0-4635-a8b5-af046805d2c9.jpg,8,//twcdn.com/3a73caa1-ae33-4527-bcc9-4d3b274c1ece.jpg
 9,bakerwatson@geekosis.com,"Lorem,cupidatat",9,//fbcdn.com/548c4633-4f74-4803-ab19-e3cb5acd526d.jpg,9,//twcdn.com/f7a1e1d1-f96d-4274-9469-a99313bac94e.jpg
 ```
+
+## TODO
+- handle exceptions (opening / writing files) and log it
+- add a method with supplying object properties
+- optimize the iterators
