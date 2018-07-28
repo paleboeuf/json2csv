@@ -50,7 +50,7 @@ class Json2Csv
   # Iterate JSON object and flatten them, if not all objects have the same properties, raise an exception
   # Inputs :
   #   - json_str : JSON string
-  #   - headers : will contain all object path properties
+  #   - headers : will contain all object properties paths
   #   - rows : will contain all objects values
   def convert_str(json_str, headers, rows)
     # Convert JSON to Hash
@@ -83,7 +83,7 @@ class Json2Csv
     # Read the file
     data_json = File.read(input_file)
 
-    # Array of all objects path properties
+    # Array of all objects properties paths
     headers = []
     # Array of all objects values
     rows = []
