@@ -240,3 +240,4 @@ id,email,tags,profiles.facebook.id,profiles.facebook.picture,profiles.twitter.id
 - handle exceptions (opening / writing files) and log it
 - add a method with supplying object properties
 - optimize the iterators
+- possibility to choose CSV delimiter

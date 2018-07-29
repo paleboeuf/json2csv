@@ -16,18 +16,18 @@ class Json2Csv
   # Recursive method for flatten hash object to string
   # Inputs :
   #  - obj : object to flatten
-  #  - properties : will contain the path properties
-  #  - results : will contain the object values
-  #  - parent : to keep properties path in recursion
+  #  - properties : will contain the properties paths
+  #  - result : will contain the object values
+  #  - parent : to keep property path in recursion
   def flatten_hash_object(obj, properties, result, parent = nil)
     obj.each do |key, data|
       org_parent = parent
 
-      # Handle properties path
+      # Handle property path
       if parent.nil?
         parent = key.to_s
       elsif
-      parent = parent + '.' + key.to_s
+        parent = parent + '.' + key.to_s
       end
 
       # Handle data type
@@ -50,7 +50,7 @@ class Json2Csv
   # Iterate JSON object and flatten them, if not all objects have the same properties, raise an exception
   # Inputs :
   #   - json_str : JSON string
-  #   - headers : will contain all object properties paths
+  #   - headers : will contain all objects properties paths
   #   - rows : will contain all objects values
   def convert_str(json_str, headers, rows)
     # Convert JSON to Hash
@@ -65,7 +65,7 @@ class Json2Csv
       rows << row
     end
 
-    # Verify that all object have same properties
+    # Verify that all objects have same properties
     headers.each do |header|
       if headers[0] != header
         raise('All objects MUST have the same properties')
